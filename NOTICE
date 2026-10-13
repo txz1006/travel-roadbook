@@ -1,6 +1,21 @@
 # NOTICE
 
-本仓库包含第三方授权内容。再分发时请连同本文件与其引用的许可原文一并保留。
+本仓库包含不同授权条款的内容。再分发时请连同本文件与其引用的许可原文一并保留。
+
+## 代码许可
+
+`LICENSE` 里的 MIT 只覆盖**可执行部分**：`.agents/scripts/` 下的全部脚本，以及 `package.json`、`requirements.txt`。
+
+## 规范文本
+
+下面这些是**纯文本规范**，以 CC BY 4.0 授权（可自由使用、修改与再分发，需保留署名）：
+
+- `AGENTS.md`、`README.md`、`CONTRIBUTING.md`
+- `.agents/agent.md`
+- `.agents/skills/*/SKILL.md`
+- `.agents/scripts/README.md`
+
+之所以单独列一节而不写进 `LICENSE`：MIT 正文后面追加任何内容都会让 GitHub 的许可识别器匹配不上，仓库会显示成 `NOASSERTION`。所以 `LICENSE` 保持为逐字的 MIT 正文。
 
 ## 字体
 

@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 travel-roadbook contributors
+Copyright (c) 2026 txz1006
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,11 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-本仓库的**规范文本**（`AGENTS.md`、`README.md`、`CONTRIBUTING.md`、
-`.agents/agent.md`、`.agents/skills/*/SKILL.md`、`.agents/scripts/README.md`）
-以 CC BY 4.0 授权：可自由使用、修改与再分发，需保留署名。
-
-第三方字体与示例图片的许可见 `NOTICE`。
