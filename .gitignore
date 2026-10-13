@@ -1,0 +1,35 @@
+# 用户数据：计划目录不入仓（默认名，改名后同步这里）
+旅行计划/
+
+# 不是本仓库的一部分：客户端本地留下的配置目录。
+# 只有当你为兼容旧版客户端手动建了 skill 软链时才可能出现（见 README「支持哪些客户端」）。
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+
+# 脚本产物：verify_page.js 的截图落在这里
+.shots/
+**/.shots/
+
+# 字体子集切分时的中间文件
+.agents/assets/fonts-baseline/.*.chars.txt
+
+# 编辑器与系统
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

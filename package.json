@@ -1,0 +1,15 @@
+{
+  "name": "travel-roadbook",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portable, client-agnostic travel planning agent with a deterministic page-regression harness.",
+  "license": "MIT",
+  "scripts": {
+    "check:env": "python .agents/scripts/check_env.py",
+    "fonts": "python .agents/scripts/subset_fonts.py examples/demo-harbin-3d",
+    "verify": "node .agents/scripts/verify_page.js examples/demo-harbin-3d"
+  },
+  "devDependencies": {
+    "playwright-core": ">=1.40"
+  }
+}

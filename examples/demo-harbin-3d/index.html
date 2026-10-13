@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>哈尔滨冰雪 3 日 · 南京出发 4 人 · 路书</title>
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<meta name="description" content="南京出发 4 人哈尔滨冰雪 3 日路书：逐日时段与移动、住宿区域取舍、三档预算明细、行前注意与避雷清单。">
+<meta name="theme-color" content="#114C6F">
+<style>
+/* ---------- 字体：霞鹜文楷 Screen 排正文，更纱黑体 Mono SC 排数字 ---------- */
+@font-face{
+  font-family:"LXGW WenKai Screen";
+  src:url("assets/fonts/lxgw-wenkai-screen-subset.woff2") format("woff2");
+  font-weight:400;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:"Sarasa Mono SC";
+  src:url("assets/fonts/sarasa-mono-sc-subset.woff2") format("woff2");
+  font-weight:400;font-style:normal;font-display:swap;
+}
+
+:root{
+  --bg:#F6F7F9; --card:#FFFFFF; --ink:#15232E; --ink2:#4C5F6D; --ink3:#77899A;
+  --line:#E3E9EF; --line2:#CFDAE3;
+  --ice:#1B6C9C; --ice-d:#114C6F; --ice-l:#E9F2F8; --ice-m:#BBD8E9;
+  --warn:#A8541C; --warn-bg:#FDF3E8;
+  --ok:#2F6B52; --ok-bg:#EDF6F1;
+  --r:14px; --r-s:9px;
+  --shadow:0 1px 2px rgba(21,35,46,.04),0 6px 20px rgba(21,35,46,.06);
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"LXGW WenKai Screen","PingFang SC","Hiragino Sans GB",system-ui,sans-serif;
+  font-size:16px;line-height:1.75;
+}
+code,pre,kbd,samp,.mono,.num{
+  font-family:"Sarasa Mono SC",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-variant-numeric:tabular-nums lining-nums;
+}
+img{max-width:100%;display:block}
+a{color:var(--ice-d);text-decoration:none;border-bottom:1px solid var(--ice-m)}
+a:hover{border-bottom-color:var(--ice)}
+h1,h2,h3,h4{margin:0;line-height:1.35;letter-spacing:.02em;font-weight:400}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* ---------- 吸顶导航 ---------- */
+.topnav{
+  position:sticky;top:0;z-index:30;background:rgba(246,247,249,.92);
+  backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--line);
+}
+.topnav .wrap{display:flex;gap:6px;align-items:center;height:52px;overflow-x:auto;scrollbar-width:none}
+.topnav .wrap::-webkit-scrollbar{display:none}
+.topnav b{font-weight:400;color:var(--ice-d);white-space:nowrap;letter-spacing:.04em;margin-right:6px}
+.topnav a{
+  white-space:nowrap;border:0;color:var(--ink2);font-size:14px;padding:5px 10px;
+  border-radius:999px;background:transparent;
+}
+.topnav a:hover{background:#fff;color:var(--ice-d)}
+
+/* ---------- 首屏 ---------- */
+.hero{position:relative;min-height:64vh;display:flex;align-items:flex-end;overflow:hidden;background:#DCE6ED}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .veil{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(246,247,249,.34) 0%,rgba(246,247,249,.62) 38%,rgba(246,247,249,.95) 76%,#F6F7F9 100%);
+}
+.hero .inner{position:relative;z-index:2;width:100%;padding:56px 0 30px}
+.kicker{font-size:13px;letter-spacing:.16em;color:var(--ice-d);margin-bottom:10px}
+.hero h1{font-size:clamp(28px,5.4vw,46px);color:var(--ink)}
+.hero .sub{margin-top:10px;font-size:clamp(15px,2.2vw,18px);color:var(--ink2);max-width:44em}
+.hero .sub em{font-style:normal;color:var(--ice-d);border-bottom:2px solid var(--ice-m)}
+
+/* ---------- 关键事实 ---------- */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:-6px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow)}
+.fact .k{font-size:12px;letter-spacing:.1em;color:var(--ink3);margin-bottom:4px}
+.fact .v{font-size:15px;color:var(--ink)}
+.fact .v .mono{color:var(--ice-d)}
+
+/* ---------- 章节 ---------- */
+section{padding:44px 0 6px}
+.sec-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.sec-h h2{font-size:clamp(20px,3vw,26px)}
+.sec-h .tag{font-size:12px;color:var(--ice-d);background:var(--ice-l);border-radius:999px;padding:2px 10px;letter-spacing:.06em}
+.sec-lede{color:var(--ink2);max-width:52em;margin-bottom:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--shadow)}
+.card + .card{margin-top:12px}
+.card h3{font-size:17px;color:var(--ice-d);margin-bottom:6px}
+.card p{color:var(--ink2)}
+.card p + p{margin-top:8px}
+.muted{color:var(--ink3);font-size:13.5px}
+ul.tight{margin:8px 0 0;padding-left:1.1em;color:var(--ink2)}
+ul.tight li{margin:4px 0}
+
+/* ---------- 片区关系 ---------- */
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.zone{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow)}
+.zone .z1{font-size:12px;letter-spacing:.1em;color:var(--ice-d);margin-bottom:2px}
+.zone h3{font-size:17px;margin-bottom:6px}
+.zone p{color:var(--ink2);font-size:14.5px}
+.zone .stay{margin-top:10px;font-size:13px;color:var(--ok);background:var(--ok-bg);border-radius:8px;padding:4px 10px;display:inline-block}
+
+/* ---------- 日期标签 ---------- */
+.daytabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 14px}
+.daytabs button{
+  font:inherit;font-size:14.5px;color:var(--ink2);background:#fff;cursor:pointer;
+  border:1px solid var(--line2);border-radius:999px;padding:8px 16px;transition:.16s;
+}
+.daytabs button:hover{border-color:var(--ice-m);color:var(--ice-d)}
+.daytabs button[aria-selected="true"]{background:var(--ice-d);border-color:var(--ice-d);color:#fff}
+.daytabs button:focus-visible,.tbtn:focus-visible,.tools button:focus-visible{outline:3px solid var(--ice-m);outline-offset:2px}
+
+.day{display:none}
+.day.on{display:block}
+.dayhead{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;margin-bottom:8px}
+.dayhead h3{font-size:20px}
+.dayhead .where{font-size:13.5px;color:var(--ice-d);background:var(--ice-l);border-radius:999px;padding:2px 10px}
+.dayhead .load{font-size:13.5px;color:var(--ink3)}
+
+.shot{margin:0 0 14px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#DCE6ED}
+.shot img{width:100%;height:clamp(190px,34vw,320px);object-fit:cover}
+.shot figcaption{background:#fff;padding:8px 14px;font-size:13px;color:var(--ink3);border-top:1px solid var(--line)}
+
+/* ---------- 时刻表 ---------- */
+.tscroll{
+  overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--r-s);
+  transition:box-shadow .18s ease;
+}
+.tscroll.is-scrollable{box-shadow:inset -34px 0 26px -20px rgba(21,35,46,.55)}
+.tscroll.at-end{box-shadow:none}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid var(--line);border-radius:var(--r-s);overflow:hidden}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:14.5px}
+thead th{background:var(--ice-l);color:var(--ice-d);font-weight:400;font-size:13.5px;letter-spacing:.05em}
+tbody tr:last-child td{border-bottom:0}
+td.t{white-space:nowrap;min-width:100px;color:var(--ice-d)}
+td.plan{min-width:210px;color:var(--ink)}
+td.move{min-width:152px;color:var(--ink2)}
+td.cost{min-width:150px;color:var(--ink2)}
+td.rem{min-width:130px;color:var(--ink3);font-size:13.5px}
+table.ts{min-width:750px}
+.tag{display:inline-block;font-size:12px;line-height:1.6;border-radius:6px;padding:0 7px;background:var(--ice-l);color:var(--ice-d);white-space:nowrap}
+.tag.w{background:var(--warn-bg);color:var(--warn)}
+.tag.g{background:var(--ok-bg);color:var(--ok)}
+.hint{display:none;font-size:13px;color:var(--ink3);margin-top:7px}
+
+/* ---------- 小卡片网格 ---------- */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14.5px;color:var(--ink2);margin-top:6px}
+.kv dt{color:var(--ink3);white-space:nowrap}
+.kv dd{margin:0}
+
+/* ---------- 预算 ---------- */
+.tiers{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 16px}
+.tbtn{
+  font:inherit;font-size:14.5px;cursor:pointer;border:1px solid var(--line2);background:#fff;
+  color:var(--ink2);border-radius:999px;padding:8px 16px;transition:.16s;
+}
+.tbtn:hover{border-color:var(--ice-m);color:var(--ice-d)}
+.tbtn[aria-pressed="true"]{background:var(--ice-d);border-color:var(--ice-d);color:#fff}
+.budget-note{font-size:13.5px;color:var(--ink3);margin-bottom:12px}
+td.amt{white-space:normal;text-align:right;min-width:132px;color:var(--ink)}
+td.amt .cur{color:var(--ink3);margin-right:2px}
+td.amt .num{font-size:14.5px}
+tr.sum td{background:#FBFCFD;color:var(--ink)}
+tr.big td{background:var(--ice-l);color:var(--ice-d);font-size:15.5px}
+.perhead{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 20px;box-shadow:var(--shadow);margin-top:12px}
+.perhead .big{font-size:clamp(18px,4.6vw,28px);color:var(--ice-d)}
+.perhead .cur{font-size:16px;color:var(--ink3)}
+
+/* ---------- 避雷 ---------- */
+.avoid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.av{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--warn);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow)}
+.av h4{font-size:15.5px;color:var(--warn);margin-bottom:6px}
+.av p{font-size:14.5px;color:var(--ink2)}
+.av p b{font-weight:400;color:var(--ink)}
+.pin{background:var(--warn-bg);border:1px solid #F0DCC6;border-radius:var(--r);padding:16px 20px;margin-bottom:12px}
+.pin .hd{color:var(--warn);font-size:15.5px;margin-bottom:6px}
+.pin ul{margin:0;padding-left:1.1em;color:var(--ink2);font-size:14.5px}
+.pin li{margin:5px 0}
+
+/* ---------- 清单 ---------- */
+.packbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 14px}
+.tools{display:flex;gap:8px;flex-wrap:wrap}
+.tools button{
+  font:inherit;font-size:14px;cursor:pointer;border:1px solid var(--line2);background:#fff;
+  color:var(--ink2);border-radius:999px;padding:7px 14px;
+}
+.tools button:hover{border-color:var(--ice-m);color:var(--ice-d)}
+#prog{font-size:14.5px;color:var(--ice-d)}
+.pgroup{margin-top:14px}
+.pgroup .gt{font-size:13px;letter-spacing:.1em;color:var(--ink3);margin-bottom:6px}
+#checklist label{
+  display:flex;gap:10px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r-s);padding:10px 14px;margin-bottom:7px;cursor:pointer;font-size:14.5px;color:var(--ink2);
+}
+#checklist label:hover{border-color:var(--ice-m)}
+#checklist input{margin:5px 0 0;width:16px;height:16px;accent-color:var(--ice-d);flex:0 0 auto}
+#checklist label.done span{color:var(--ink3);text-decoration:line-through}
+
+/* ---------- 地图指南 ---------- */
+.guidebox{display:grid;grid-template-columns:1.35fr 1fr;gap:20px;align-items:start}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.qr{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:12px;text-align:center}
+.qr img{width:100%;max-width:180px;margin:0 auto;border-radius:6px}
+.qr .cap{font-size:12.5px;color:var(--ink3);margin-top:8px;line-height:1.5}
+.linkline{margin-top:12px;font-size:13.5px;color:var(--ink2);word-break:break-all;overflow-wrap:anywhere}
+
+/* ---------- 图片版权 ---------- */
+.credits{font-size:13px;color:var(--ink3);line-height:1.85}
+.credits li{margin:5px 0}
+.credits .cn{color:var(--ink2)}
+
+footer{margin-top:36px;padding:24px 0 40px;border-top:1px solid var(--line);color:var(--ink3);font-size:13px}
+
+/* ---------- 窄屏 ---------- */
+@media (max-width:900px){
+  .facts{grid-template-columns:1fr}
+  .zones{grid-template-columns:1fr}
+  .grid2{grid-template-columns:1fr}
+  .avoid{grid-template-columns:1fr}
+  .guidebox{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  body{font-size:15.5px}
+  .hint{display:block}
+  .hero{min-height:56vh}
+  section{padding:32px 0 4px}
+  .card,.perhead{padding:15px 16px}
+  #checklist label{padding:9px 12px}
+}
+
+/* ---------- 打印 ---------- */
+@media print{
+  .topnav,.daytabs,.hint,.tools,.tiers,.packbar{display:none!important}
+  .day{display:block!important;page-break-inside:avoid;margin-bottom:18px}
+  .tscroll{overflow:visible!important;box-shadow:none!important}
+  table,.tscroll table{min-width:0!important;width:100%!important}
+  th,td{min-width:0!important;white-space:normal!important}
+  td.t{white-space:nowrap!important}
+  section{padding:18px 0 0}
+  .hero{min-height:auto;background:#fff}
+  .hero .veil{display:none}
+  .hero img{position:static;height:auto;max-height:230px;object-fit:cover}
+  body{background:#fff}
+  .card,.fact,.zone,.perhead,.av,.qr{box-shadow:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav" aria-label="页面导航">
+  <div class="wrap">
+    <b>哈尔滨 3 日</b>
+    <a href="#plan">怎么排的</a>
+    <a href="#days">逐日路书</a>
+    <a href="#stay">住宿与交通</a>
+    <a href="#budget">预算</a>
+    <a href="#notes">行前注意</a>
+    <a href="#avoid">避雷</a>
+    <a href="#packing">出发清单</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <img src="assets/images/demo-ice-buildings.jpg" alt="冰雪大世界园区内用冰块砌成的建筑，背景是摩天轮">
+  <div class="veil"></div>
+  <div class="inner">
+    <div class="wrap">
+      <div class="kicker">南京出发 · 4 人 · 3 天 2 晚</div>
+      <h1>哈尔滨冰雪三天</h1>
+      <p class="sub">这次旅行的空间关系很简单：<em>两晚只住一个基地</em>（中央大街一带），白天只在<em>道里老城</em>和<em>松北冰雪区</em>两个片区之间移动。第三天上午在老道外收尾，午后返程。行程围绕一件事安排——把有限的白天用在户外，把夜晚留给冰灯。</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="facts" style="margin-top:14px">
+    <div class="fact">
+      <div class="k">抵达方式</div>
+      <div class="v">南京直飞 <span class="mono">2&nbsp;小时&nbsp;45&nbsp;分</span> 落地太平国际机场，进市区再花 <span class="mono">40–50</span> 分钟</div>
+    </div>
+    <div class="fact">
+      <div class="k">住宿基地</div>
+      <div class="v">道里区中央大街–防洪纪念塔一带，两晚不换酒店，步行可到三个核心点</div>
+    </div>
+    <div class="fact">
+      <div class="k">白天窗口</div>
+      <div class="v">12 月下旬日落约 <span class="mono">15:50</span>，户外有效时间只有 <span class="mono">8</span> 小时左右</div>
+    </div>
+  </div>
+
+  <section id="plan">
+    <div class="sec-h"><h2>这三天怎么排</h2><span class="tag">片区串联</span></div>
+    <p class="sec-lede">哈尔滨的冰雪景点分在两个区：老城景点（索菲亚教堂、中央大街、防洪纪念塔、老道外）挤在道里与道外，冰雪项目（太阳岛雪博会、冰雪大世界）在松北。地铁 2 号线正好把这两片串起来，所以住中央大街是最省事的解法——不用换酒店，也不用每天打车过江。</p>
+
+    <div class="zones">
+      <div class="zone">
+        <div class="z1">第 1 天</div>
+        <h3>道里老城步行线</h3>
+        <p>索菲亚教堂 → 中央大街 → 防洪纪念塔 → 松花江畔，四个点之间全部步行，最远一段 15 分钟。重点是赶在日落前到江边。</p>
+        <span class="stay">住中央大街</span>
+      </div>
+      <div class="zone">
+        <div class="z1">第 2 天</div>
+        <h3>松北冰雪主线</h3>
+        <p>上午太阳岛雪博会，下午到夜里进冰雪大世界。两个点都在松北，地铁 2 号线一站之隔，是整趟行程的主角日。</p>
+        <span class="stay">住中央大街</span>
+      </div>
+      <div class="zone">
+        <div class="z1">第 3 天</div>
+        <h3>道外与南岗收尾</h3>
+        <p>上午老道外中华巴洛克街区，午后视航班时间走一下果戈里大街采购，傍晚回机场。这一天的节奏按回程班次随时可以砍掉后一段。</p>
+        <span class="stay">当天返程</span>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h3>为什么三天不排雪乡和亚布力</h3>
+      <p>雪乡在牡丹江海林，单程车程 5–6 小时且必须过夜，往返至少占掉两天；亚布力滑雪场往返也要一整天。三天的档期里硬塞任何一个，哈尔滨市区就只剩半天，索菲亚教堂、中央大街和冰雪大世界必然要牺牲两个。<b>所以这一版把三天全部留给哈尔滨市区</b>：一天老城、一天冰雪、一天收尾，节奏不赶，也不需要在零下二十度里长时间坐车。</p>
+      <p class="muted">如果雪乡是此行的核心目的，正确做法是把行程加到 5 天 4 晚，用其中 2 天走雪乡往返，而不是压缩哈尔滨市区。</p>
+    </div>
+  </section>
+
+  <section id="days">
+    <div class="sec-h"><h2>逐日路书</h2><span class="tag">时段 · 移动 · 费用</span></div>
+    <p class="sec-lede">每天给出完整时段与移动方式。表格在窄屏上可以左右滑动查看全部列，打印时会自动展开成完整宽度。</p>
+
+    <div class="daytabs" role="tablist" aria-label="选择日期">
+      <button type="button" data-day="1" role="tab" aria-selected="true" aria-controls="day-1">第 1 天 · 抵达与道里老城</button>
+      <button type="button" data-day="2" role="tab" aria-selected="false" aria-controls="day-2">第 2 天 · 松北冰雪主线</button>
+      <button type="button" data-day="3" role="tab" aria-selected="false" aria-controls="day-3">第 3 天 · 道外与返程</button>
+    </div>
+
+    <!-- ================= D1 ================= -->
+    <article class="day on" id="day-1" role="tabpanel" aria-label="第 1 天">
+      <div class="daybody">
+        <div class="dayhead">
+          <h3>抵达＋道里老城步行线</h3>
+          <span class="where">道里区 · 全程步行</span>
+          <span class="load">户外约 5&nbsp;小时 · 步行约 3&nbsp;公里</span>
+        </div>
+        <div class="tscroll">
+          <table class="ts">
+            <thead><tr><th>时段</th><th>安排</th><th>移动／耗时</th><th>费用</th><th>预约／提醒</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="t mono">07:10–09:55</td>
+                <td class="plan">南京禄口起飞，飞抵哈尔滨太平国际机场 T2</td>
+                <td class="move">直飞约 2 小时 45 分</td>
+                <td class="cost">含在往返机票内</td>
+                <td class="rem">参考班次吉祥 HO1723；国际／国内值机提前 2 小时到</td>
+              </tr>
+              <tr>
+                <td class="t mono">10:00–11:00</td>
+                <td class="plan">取行李、换厚装备、进市区</td>
+                <td class="move">网约车 40–50 分钟／机场大巴约 60 分钟</td>
+                <td class="cost">网约车 <span class="mono">¥110–140</span> 一车；大巴 <span class="mono">¥20</span>/人</td>
+                <td class="rem">4 人一车比大巴省时；机场内更衣室可换装</td>
+              </tr>
+              <tr>
+                <td class="t mono">11:00–11:20</td>
+                <td class="plan">中央大街一带酒店寄存行李</td>
+                <td class="move">步行</td>
+                <td class="cost">—</td>
+                <td class="rem">冰雪季入住高峰，先寄存再玩，别等下午办入住</td>
+              </tr>
+              <tr>
+                <td class="t mono">11:30–12:45</td>
+                <td class="plan">午餐：中央大街俄式西餐或老厨家锅包肉</td>
+                <td class="move">步行</td>
+                <td class="cost">人均 <span class="mono">¥90–150</span></td>
+                <td class="rem">老厨家饭点排队久，可先取号再逛街</td>
+              </tr>
+              <tr>
+                <td class="t mono">13:00–14:15</td>
+                <td class="plan">圣索菲亚教堂，看外观与内部建筑艺术馆</td>
+                <td class="move">步行 10 分钟</td>
+                <td class="cost">内部 <span class="mono">¥25</span>/人；广场免费</td>
+                <td class="rem"><span class="tag w">16:45 停止入场</span> 周一闭馆</td>
+              </tr>
+              <tr>
+                <td class="t mono">14:20–15:30</td>
+                <td class="plan">中央大街慢走，道里菜市场买红肠与大列巴</td>
+                <td class="move">步行约 1.4 公里</td>
+                <td class="cost">马迭尔冰棍约 <span class="mono">¥10</span>；伴手礼自定</td>
+                <td class="rem">面包石路面结冰，穿防滑鞋</td>
+              </tr>
+              <tr>
+                <td class="t mono">15:30–16:45</td>
+                <td class="plan">防洪纪念塔、斯大林公园、松花江畔看日落</td>
+                <td class="move">步行 15 分钟</td>
+                <td class="cost">免费；江上项目另计 <span class="mono">¥50–100</span>/人</td>
+                <td class="rem"><span class="tag">日落约 15:50</span> 必须提前到江边</td>
+              </tr>
+              <tr>
+                <td class="t mono">17:00–18:30</td>
+                <td class="plan">回酒店办理入住、室内回暖休息</td>
+                <td class="move">步行</td>
+                <td class="cost">—</td>
+                <td class="rem">回暖再出门，避免连续户外超过 3 小时</td>
+              </tr>
+              <tr>
+                <td class="t mono">18:30–20:00</td>
+                <td class="plan">晚餐：铁锅炖或杀猪菜</td>
+                <td class="move">步行或打车 10 分钟</td>
+                <td class="cost">人均 <span class="mono">¥80–120</span></td>
+                <td class="rem">铁锅炖现炖需 30 分钟，落座先下单</td>
+              </tr>
+              <tr>
+                <td class="t mono">20:00–21:00</td>
+                <td class="plan">中央大街夜景，返回酒店</td>
+                <td class="move">步行</td>
+                <td class="cost">—</td>
+                <td class="rem">夜间体感最低，控制在 1 小时内</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="hint">表格可左右滑动查看「费用」「预约／提醒」列 →</p>
+        <div class="card">
+          <h3>备选与机动</h3>
+          <p><b>航班晚点落地。</b>索菲亚教堂内部与江畔日落二选一：教堂 16:45 停止入场，日落 15:50，二者冲突时优先江畔（教堂内部次日 D3 上午可补，D3 上午需相应压缩老道外）。</p>
+          <p><b>身体还没适应低温。</b>把中央大街和教堂合并成一段，江畔改成车里看，晚餐提前到 17:30，当晚早睡——第二天才是体力消耗最大的一天。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= D2 ================= -->
+    <article class="day" id="day-2" role="tabpanel" aria-label="第 2 天">
+      <div class="daybody">
+        <div class="dayhead">
+          <h3>松北冰雪主线</h3>
+          <span class="where">松北区 · 地铁 2 号线</span>
+          <span class="load">户外约 9&nbsp;小时 · 全天最耗体力</span>
+        </div>
+
+        <div class="tiers" role="group" aria-label="第 2 天下午的节奏">
+          <button type="button" class="tbtn" data-pace="rest" aria-pressed="true">稳健版：下午回市区休整</button>
+          <button type="button" class="tbtn" data-pace="direct" aria-pressed="false">紧凑版：直落冰雪大世界</button>
+        </div>
+
+        <div class="tscroll">
+          <table class="ts">
+            <thead><tr><th>时段</th><th>安排</th><th>移动／耗时</th><th>费用</th><th>预约／提醒</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="t mono">07:30–08:20</td>
+                <td class="plan">早餐</td>
+                <td class="move">步行</td>
+                <td class="cost">人均 <span class="mono">¥20–35</span></td>
+                <td class="rem">把热量吃够，全天户外时间长</td>
+              </tr>
+              <tr>
+                <td class="t mono">08:40–09:00</td>
+                <td class="plan">地铁 2 号线：中央大街站 → 太阳岛站</td>
+                <td class="move">地铁 8 站约 20 分钟</td>
+                <td class="cost"><span class="mono">¥3</span>/人</td>
+                <td class="rem">2 号口出站最近游客中心</td>
+              </tr>
+              <tr>
+                <td class="t mono">09:00–12:30</td>
+                <td class="plan">太阳岛雪博会：雪雕群、雪博大滑梯、大熊猫馆</td>
+                <td class="move">步行＋园内摆渡</td>
+                <td class="cost">标准票 <span class="mono">¥198</span>/人</td>
+                <td class="rem"><span class="tag w">16:00 停止售票</span> 大熊猫馆需单独预约</td>
+              </tr>
+              <tr>
+                <td class="t mono">12:40–13:40</td>
+                <td class="plan">午餐，先回暖再定下午路线</td>
+                <td class="move">步行</td>
+                <td class="cost">人均 <span class="mono">¥60–100</span></td>
+                <td class="rem">岛上餐饮选择少，可自带干粮</td>
+              </tr>
+
+              <tr data-pace-row="rest">
+                <td class="t mono">13:50–15:00</td>
+                <td class="plan">回市区酒店休整、换厚装与备用暖宝宝</td>
+                <td class="move">地铁 2 号线往返约 50 分钟</td>
+                <td class="cost"><span class="mono">¥6</span>/人</td>
+                <td class="rem">这一步是全天最值的体力投资，晚间要撑到 21 点</td>
+              </tr>
+              <tr data-pace-row="rest">
+                <td class="t mono">15:20–15:45</td>
+                <td class="plan">地铁 2 号线：中央大街站 → 冰雪大世界站</td>
+                <td class="move">地铁 8 站约 25 分钟</td>
+                <td class="cost"><span class="mono">¥3</span>/人</td>
+                <td class="rem">3 号口出站步行即到入口</td>
+              </tr>
+
+              <tr data-pace-row="direct" style="display:none">
+                <td class="t mono">13:50–14:50</td>
+                <td class="plan">地铁转往冰雪大世界站，在周边商圈午餐并暖身</td>
+                <td class="move">地铁 1 站约 5 分钟</td>
+                <td class="cost">人均 <span class="mono">¥60–100</span></td>
+                <td class="rem">不再往返市区，用室内休息替代酒店休整</td>
+              </tr>
+              <tr data-pace-row="direct" style="display:none">
+                <td class="t mono">15:00–15:20</td>
+                <td class="plan">检票入园，先逛白天冰建群</td>
+                <td class="move">步行</td>
+                <td class="cost">门票 <span class="mono">¥328</span>/人</td>
+                <td class="rem">早入园排队短，日落前能拍到蓝天配冰雕</td>
+              </tr>
+
+              <tr>
+                <td class="t mono" data-pace-time>16:00–21:00</td>
+                <td class="plan">冰雪大世界：冰建群、500 米大滑梯、雪花摩天轮、冰雪蹦迪</td>
+                <td class="move">园内步行</td>
+                <td class="cost">门票 <span class="mono">¥328</span>/人</td>
+                <td class="rem"><span class="tag w">大滑梯需预约</span> 每 1.5–2 小时进暖房一次</td>
+              </tr>
+              <tr>
+                <td class="t mono">21:15–21:45</td>
+                <td class="plan">地铁返回中央大街，或直接打车</td>
+                <td class="move">地铁约 25 分钟／打车约 30 分钟</td>
+                <td class="cost">地铁 <span class="mono">¥3</span>/人；打车 <span class="mono">¥60–90</span> 一车</td>
+                <td class="rem">出园前在站内确认末班车时间</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="hint">表格可左右滑动查看「费用」「预约／提醒」列 →</p>
+
+        <div class="card">
+          <h3>备选与机动</h3>
+          <p><b>下午体力见底。</b>切到稳健版：回酒店睡 40 分钟再出发。这一小时往返的地铁，比在零下二十度里硬撑三小时划算得多。</p>
+          <p><b>晚上想早点结束。</b>冰雪大世界 19:00 看完整点亮灯就能走，20:00 前出园，末班车压力小很多。</p>
+          <p><b>雪博会当天闭园或人流失控。</b>上午改去哈尔滨极地公园（海洋馆 5 大场馆 <span class="mono">¥130</span>/人），下午照原计划进冰雪大世界。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= D3 ================= -->
+    <article class="day" id="day-3" role="tabpanel" aria-label="第 3 天">
+      <div class="daybody">
+        <div class="dayhead">
+          <h3>道外与南岗，傍晚返程</h3>
+          <span class="where">道外区 → 南岗区 → 机场</span>
+          <span class="load">户外约 6&nbsp;小时 · 全天含 2 段打车</span>
+        </div>
+        <div class="tscroll">
+          <table class="ts">
+            <thead><tr><th>时段</th><th>安排</th><th>移动／耗时</th><th>费用</th><th>预约／提醒</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="t mono">07:30–08:20</td>
+                <td class="plan">早餐，退房并把行李寄存在酒店</td>
+                <td class="move">步行</td>
+                <td class="cost">人均 <span class="mono">¥20–35</span></td>
+                <td class="rem">道外街区店铺约 10:00 才开门，先拍外景</td>
+              </tr>
+              <tr>
+                <td class="t mono">08:40–09:00</td>
+                <td class="plan">打车前往老道外</td>
+                <td class="move">打车约 15 分钟</td>
+                <td class="cost"><span class="mono">¥25–35</span> 一车</td>
+                <td class="rem">也可乘地铁 3 号线至中华巴洛克街区站</td>
+              </tr>
+              <tr>
+                <td class="t mono">09:00–11:30</td>
+                <td class="plan">中华巴洛克历史文化街区：老院子、老字号、张包铺一带</td>
+                <td class="move">步行</td>
+                <td class="cost">街区免费</td>
+                <td class="rem">早午餐可在这里解决，人均 <span class="mono">¥40–70</span></td>
+              </tr>
+              <tr>
+                <td class="t mono">11:30–12:40</td>
+                <td class="plan">街区午餐：砂锅居、老式熏酱</td>
+                <td class="move">步行</td>
+                <td class="cost">人均 <span class="mono">¥40–70</span></td>
+                <td class="rem">道外小吃店排队较多，错峰 11:15 前到</td>
+              </tr>
+              <tr>
+                <td class="t mono">13:00–15:30</td>
+                <td class="plan">果戈里大街、秋林公司采购红肠与大列巴</td>
+                <td class="move">打车约 20 分钟</td>
+                <td class="cost">打车 <span class="mono">¥30–40</span>；伴手礼自定</td>
+                <td class="rem">航班偏早时整段可省，直接回酒店取行李</td>
+              </tr>
+              <tr>
+                <td class="t mono">15:30–16:10</td>
+                <td class="plan">回酒店取行李</td>
+                <td class="move">打车约 20 分钟</td>
+                <td class="cost"><span class="mono">¥30–40</span> 一车</td>
+                <td class="rem">留 30 分钟缓冲，中央大街一带傍晚易堵</td>
+              </tr>
+              <tr>
+                <td class="t mono">16:10–17:00</td>
+                <td class="plan">市区 → 太平国际机场 T2</td>
+                <td class="move">网约车 40–50 分钟</td>
+                <td class="cost"><span class="mono">¥110–140</span> 一车</td>
+                <td class="rem">降雪天可能再延 20 分钟以上</td>
+              </tr>
+              <tr>
+                <td class="t mono">17:00–19:30</td>
+                <td class="plan">值机、托运、安检</td>
+                <td class="move">步行</td>
+                <td class="cost">—</td>
+                <td class="rem">国内航班提前 2 小时到，冬季除冰可能延误</td>
+              </tr>
+              <tr>
+                <td class="t mono">19:30–23:55</td>
+                <td class="plan">返程航班回南京</td>
+                <td class="move">直飞约 2 小时 55 分</td>
+                <td class="cost">含在往返机票内</td>
+                <td class="rem">参考班次吉祥 HO1724；落地较晚，提前安排接机</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="hint">表格可左右滑动查看「费用」「预约／提醒」列 →</p>
+        <div class="card">
+          <h3>备选与机动</h3>
+          <p><b>回程是下午班机。</b>砍掉果戈里大街一段，11:30 离开老道外，12:30 取行李后直奔机场，13:30 前到航站楼。</p>
+          <p><b>遇上大雪或高速封控。</b>16:00 前必须出发，宁可早到机场枯坐，也不要在路上赌时间。</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="stay">
+    <div class="sec-h"><h2>住宿与交通</h2><span class="tag">两晚一个基地</span></div>
+    <p class="sec-lede">三天的行程只有一个住宿基地，换酒店的时间成本在零下二十度里尤其不划算。</p>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>住宿区域取舍</h3>
+        <p><b>首选 · 中央大街–防洪纪念塔一带（道里区）</b><br>步行可达中央大街、索菲亚教堂、松花江畔；地铁 2 号线中央大街站直连松北冰雪区。餐饮密集、夜间热闹，第一次来最省心。缺点是冰雪季房价上浮明显、临街房间夜里偏吵。</p>
+        <p><b>备选 · 西头道街–东风街一带（道里区）</b><br>离索菲亚教堂更近，动线比首选再短 5–10 分钟，晚间隔音普遍更好。缺点是离地铁口稍远，去松北要先走一段。</p>
+        <p class="muted"><b>不建议：</b>松北区（白天离冰雪大世界近，但晚上回市区不便、餐饮少）；哈尔滨西站周边（离所有景点都远，每天多花 1 小时在路上）。</p>
+      </div>
+
+      <div class="card">
+        <h3>酒店候选（4 人 2 间双床房）</h3>
+        <dl class="kv">
+          <dt>如家商旅</dt><dd>中央大街防洪纪念塔店，道里区友谊路 225 号 — 约 <span class="mono">¥306</span> 起/间/晚</dd>
+          <dt>维也纳</dt><dd>中央大街索菲亚店，道里区尚志大街 29 号 — 约 <span class="mono">¥328</span> 起/间/晚</dd>
+          <dt>如家精选</dt><dd>友谊宫地铁站店，道里区中医街 82 号 — 约 <span class="mono">¥398</span> 起/间/晚</dd>
+          <dt>季枫国际</dt><dd>中央大街圣索菲亚教堂店，道里区西四道街 16 号 — 约 <span class="mono">¥736</span> 起/间/晚</dd>
+        </dl>
+        <p class="muted" style="margin-top:10px">价格为 2026-10-09 在同程查询的 2026 年 12 月入住口径 <span class="tag">估算</span>，未含元旦与春节期间的上浮。房型、余房与最终价格以预订页为准；本页只做区域与量级参考，未代为预订。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>到达、离开与市内移动</h3>
+      <p><b>往返大交通。</b>南京禄口 ⇄ 哈尔滨太平，直飞约 2 小时 40 分–3 小时 5 分，经济舱全价约 <span class="mono">¥1,740</span>/单程 <span class="tag">已核实</span>。12 月下旬旺季直飞去程参考价从 <span class="mono">¥2,130</span> 起 <span class="tag">估算</span>。查询日期 2026-10-09，出行日以实际航班与票价为准。</p>
+      <p><b>机场接驳。</b>太平国际机场 T2 到中央大街一带约 40–50 分钟 <span class="tag">估算</span>：网约车 <span class="mono">¥110–140</span> 一车，4 人同行比机场大巴（<span class="mono">¥20</span>/人）更省时。地铁 2 号线不通机场，不要按地铁规划。</p>
+      <p><b>市内主线。</b>地铁 2 号线是这次行程的骨架 <span class="tag">已核实</span>：中央大街站 → 太阳岛站 → 冰雪大世界站，单程票价 <span class="mono">¥2–5</span>，冰雪大世界站 3 号口出站即到园区入口。跨区补两段打车（道外、南岗），其余步行。</p>
+      <p><b>当季时段。</b>2026–2027 季（第 28 届）冰雪大世界的开园日与每日营业时段官方尚未发布 <span class="tag w">待确认</span>，本页按上一季 12 月中下旬开园、10:00–21:30 左右的区间安排；出行前请查运营方公告。</p>
+    </div>
+  </section>
+
+  <section id="budget">
+    <div class="sec-h"><h2>预算明细</h2><span class="tag">4 人 · 含往返机票</span></div>
+    <p class="sec-lede">分三档给出同一套分项：换档只改变住宿档次、餐饮标准与体验范围，分项与合计同步重算。金额单位人民币，均为 2026-10-09 的查询或推算口径。</p>
+    <p class="budget-note">本页门票按已核实票价计：冰雪大世界标准成人票 <span class="mono">¥328</span>、太阳岛雪博会标准票 <span class="mono">¥198</span>、圣索菲亚教堂内部 <span class="mono">¥25</span>（查询日期 2026-10-09）；机票与酒店为估算区间，实际以预订页为准。</p>
+
+    <div class="tiers" role="group" aria-label="选择预算档位">
+      <button type="button" class="tbtn" data-tier="econ" aria-pressed="false">经济档</button>
+      <button type="button" class="tbtn" data-tier="comfort" aria-pressed="true">舒适档</button>
+      <button type="button" class="tbtn" data-tier="quality" aria-pressed="false">品质档</button>
+    </div>
+    <p class="budget-note" id="tierHint"></p>
+
+    <div class="tscroll">
+      <table>
+        <thead><tr><th>项目说明</th><th>单价 × 数量</th><th>金额</th></tr></thead>
+        <tbody id="budgetRows"></tbody>
+      </table>
+    </div>
+    <p class="hint">表格可左右滑动查看「金额」列 →</p>
+
+    <div class="perhead">
+      <div class="muted">全程总额（含约 12% 机动金）</div>
+      <div class="big"><span class="cur">¥</span><span id="grandTotal">16,112–23,744</span></div>
+      <div class="muted" style="margin-top:4px">人均 <span class="cur">¥</span><span data-b="perhead">4,028–5,936</span>　·　人均按总额除以 4 人取整</div>
+    </div>
+
+    <div class="card">
+      <h3>口径说明</h3>
+      <ul class="tight">
+        <li><b>包含</b>：南京⇄哈尔滨往返机票、2 间双床房共 2 晚、机场往返接驳、市内地铁与两段打车、全部正餐与早餐、冰雪大世界与太阳岛雪博会门票、圣索菲亚教堂内部票。</li>
+        <li><b>不包含</b>：购物与伴手礼、江上自费冰上项目、俄罗斯风情小镇等可选门票、行李超重费、旅游保险。</li>
+        <li><b>机动金</b>：按分项合计的 12% 计，用于票价浮动、临时打车、加餐与备用保暖装备，不重复计入其他分项。</li>
+        <li><b>住宿口径</b>：按「每间每晚 × 2 间 × 2 晚」计算后再按人数看人均，未混用每人每晚。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="notes">
+    <div class="sec-h"><h2>行前注意</h2><span class="tag">冰雪季专项</span></div>
+
+    <div class="pin">
+      <div class="hd">三条必须提前落实的事</div>
+      <ul>
+        <li><b>预约类</b>：冰雪大世界大滑梯需通过官方渠道提前预约；太阳岛大熊猫馆凭雪博会门票另行预约，名额约满即止。</li>
+        <li><b>穿衣</b>：冰雪季市区体感常在 −15°C 至 −25°C，羽绒服＋抓绒＋保暖内衣三层穿法，防滑雪地靴鞋底厚度 3cm 以上。</li>
+        <li><b>时间</b>：12 月下旬日落约 15:50，所有户外安排都要往前压；夜间户外连续停留不超过 1.5–2 小时。</li>
+      </ul>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>低温与装备</h3>
+        <ul class="tight">
+          <li>暖宝宝既贴身上也贴手机和相机背面，低温下手机可能自动关机。</li>
+          <li>手机放内兜，充电宝随身；相机备一块备用电池。</li>
+          <li>面霜、润唇膏、护手霜必带，室内暖气会让皮肤迅速脱水。</li>
+          <li>进入室内前把相机装进密封袋，避免镜头起雾结霜。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>预约与票务</h3>
+        <ul class="tight">
+          <li>冰雪大世界建议线上购票，网络票价通常低于现场价。</li>
+          <li>太阳岛雪博会 16:00 停止售票、16:30 停止检票，别把入园排在下午。</li>
+          <li>圣索菲亚教堂内部周一闭馆，16:45 停止入场。</li>
+          <li>各景区的当季预约规则与开放时段以运营方当日公告为准。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="avoid">
+    <div class="sec-h"><h2>避雷清单</h2><span class="tag">具体到地点与时点</span></div>
+
+    <div class="avoid">
+      <div class="av">
+        <h4>冰雪大世界大滑梯</h4>
+        <p><b>容易犯的错：</b>16:00 之后才去排队，高峰时段等待可超过 1 小时，等排到时手指已经冻僵。<br><b>正确做法：</b>入园第一件事确认预约时段，或直接选含快速通道的票种。<br><b>不得不改时：</b>当天没排上，第二天可再买票入园，住宿顺延一晚要在当天 18:00 前定下来并同步改回程机票。</p>
+      </div>
+      <div class="av">
+        <h4>把日落当成傍晚的事</h4>
+        <p><b>容易犯的错：</b>按夏天的直觉把松花江畔排在 17:00，到江边天已经全黑。<br><b>正确做法：</b>12 月下旬日落约 15:50，15:30 前站到江畔，把中央大街放在日落之后。<br><b>不得不改时：</b>当天没赶上，第二天上午太阳岛回来时从江畔走一段，光线同样好。</p>
+      </div>
+      <div class="av">
+        <h4>地铁末班车</h4>
+        <p><b>容易犯的错：</b>21:50 才从冰雪大世界出园，进站发现末班车已经过了。<br><b>正确做法：</b>出园前在站内看清末班时刻，或 21:00 一到就打车（中央大街方向约 ¥60–90 一车）。<br><b>不得不改时：</b>直接打车，不要为省几十块在站外等不确定的班次。</p>
+      </div>
+      <div class="av">
+        <h4>结冰路面</h4>
+        <p><b>容易犯的错：</b>穿平底光滑的鞋走中央大街的面包石路面与地下通道台阶。<br><b>正确做法：</b>防滑鞋或加装冰爪，台阶扶扶手，拍照时先站定再举手机。<br><b>不得不改时：</b>同行有人滑倒受伤，先就近就医，当天行程整体砍掉后半段。</p>
+      </div>
+      <div class="av">
+        <h4>江上冰上项目</h4>
+        <p><b>容易犯的错：</b>跟着路边拉客的人上冰，玩没有围栏与售票处的项目。<br><b>正确做法：</b>只走有围栏、有正规售票处、有人流管理的区域。<br><b>不得不改时：</b>对安全性有疑虑就直接放弃，松花江观光索道（单程 ¥58）是更稳的替代。</p>
+      </div>
+      <div class="av">
+        <h4>机场与车站外的拉客</h4>
+        <p><b>容易犯的错：</b>出航站楼跟着喊价的陌生人上车。<br><b>正确做法：</b>用网约车或在正规出租车排队区打表。<br><b>不得不改时：</b>价格谈不拢宁可走机场大巴（¥20/人），别在路边僵持。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="packing">
+    <div class="sec-h"><h2>出发清单</h2><span class="tag">可在本页勾选</span></div>
+    <p class="sec-lede">勾选状态保存在本机浏览器里，换设备不同步；打印时会带上当前勾选状态。</p>
+
+    <div class="packbar">
+      <span id="prog">0/0</span>
+      <div class="tools">
+        <button type="button" id="onlyUndone">只看未完成</button>
+        <button type="button" id="reset">清空勾选</button>
+      </div>
+    </div>
+
+    <div id="checklist">
+      <div class="pgroup">
+        <div class="gt">证件与订单</div>
+        <label><input type="checkbox" data-k="id"><span>每位成员的身份证原件，学生证可享部分景点优惠</span></label>
+        <label><input type="checkbox" data-k="flight"><span>往返机票行程单与值机提醒</span></label>
+        <label><input type="checkbox" data-k="hotel"><span>酒店预订确认单，确认 2 间双床房与寄存行李安排</span></label>
+        <label><input type="checkbox" data-k="ice"><span>冰雪大世界门票与 500 米大滑梯预约</span></label>
+        <label><input type="checkbox" data-k="snow"><span>太阳岛雪博会门票与熊猫馆预约</span></label>
+      </div>
+      <div class="pgroup">
+        <div class="gt">交通</div>
+        <label><input type="checkbox" data-k="metro"><span>哈尔滨地铁乘车码（支付宝或云闪付内开通）</span></label>
+        <label><input type="checkbox" data-k="taxi"><span>网约车应用可用并有余额，机场到市区方案已定</span></label>
+        <label><input type="checkbox" data-k="back"><span>返程当晚南京接机或打车方案</span></label>
+      </div>
+      <div class="pgroup">
+        <div class="gt">衣物与健康</div>
+        <label><input type="checkbox" data-k="coat"><span>羽绒服＋抓绒＋保暖内衣三层穿法，每人都齐</span></label>
+        <label><input type="checkbox" data-k="boots"><span>防滑雪地靴，鞋底厚度 3cm 以上</span></label>
+        <label><input type="checkbox" data-k="acc"><span>帽子、围巾、手套（建议备两副，湿了要换）</span></label>
+        <label><input type="checkbox" data-k="warm"><span>暖宝宝若干，含贴手机与相机用的</span></label>
+        <label><input type="checkbox" data-k="skin"><span>面霜、润唇膏、护手霜</span></label>
+      </div>
+      <div class="pgroup">
+        <div class="gt">电子与其他</div>
+        <label><input type="checkbox" data-k="power"><span>充电宝与相机备用电池（低温掉电快）</span></label>
+        <label><input type="checkbox" data-k="cash"><span>少量现金，以及一个保温杯</span></label>
+      </div>
+    </div>
+  </section>
+
+  <section id="credits">
+    <div class="sec-h"><h2>图片来源与许可</h2><span class="tag">已知地点与授权</span></div>
+    <p class="sec-lede">页面实景照片取自 Wikimedia Commons，可回溯到具体条目、作者与许可协议。照片只用于说明地点风貌，不代表出行当日的天气、季节与客流。</p>
+    <div class="card">
+      <ul class="credits">
+        <li><span class="cn">冰雪大世界园区内用冰块砌成的建筑</span> — Garosio33，CC0，摄于 2026 年 1 月 15 日 · <a href="https://commons.wikimedia.org/wiki/File:Harbin_Ice_%26_Snow_Festival_2026_-_Saint_Sophia_Cathedral.jpg">原始条目</a></li>
+      </ul>
+      <p class="muted" style="margin-top:10px">生产版的每次交付按「首屏一张、每天至少一张」配图，每张都在这里登记作者、许可、拍摄年份与原始条目，同时写入该计划的 <code>assets/images/credits.json</code>；图片按版面等比缩放，可能裁掉边缘但不改变画面内容。本样例为让整个仓库可不带附加义务地再分发，只保留一张 CC0 照片，其余章节因此无图。<br>字体为霞鹜文楷 Screen 与更纱黑体 Mono SC 的子集，均按 SIL Open Font License 1.1 使用，许可文件随本页资源一同分发。</p>
+    </div>
+  </section>
+
+  <footer>
+    <div>哈尔滨冰雪 3 日 · 南京出发 4 人 · 规划模式：通用（未按 MBTI 调整）</div>
+    <div style="margin-top:6px">本页为行程规划与决策参考，不含任何已完成的预订。标为「已核实」的信息附有查询日期，价格与班次会浮动，出行前请以景区、航空与酒店的官方渠道为准。</div>
+  </footer>
+</main>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 预算档位数据（与 manifest.json 的 budget.tiers 一致） ---------- */
+  var TIERS = {
+    econ: {
+      hint: "经济档：早订特价票、连锁经济酒店、不上江上自费项目。人均约为舒适档的八成。",
+      rows: [
+        ["往返机票", "¥1,500–2,000/人 × 4 人", [6000, 8000]],
+        ["住宿", "¥300–400/间/晚 × 2 间 × 2 晚", [1200, 1600]],
+        ["市内交通", "机场往返 + 地铁 + 打车，4 人合计", [450, 700]],
+        ["餐饮", "¥130–180/人/天 × 4 人 × 3 天", [1550, 2150]],
+        ["门票与体验", "冰雪大世界 ¥328 + 雪博会 ¥198 + 索菲亚 ¥25，× 4 人", [2204, 2600]],
+        ["装备与杂项", "暖宝宝、寄存、雪地靴等，4 人", [300, 500]]
+      ],
+      lodge: [1200, 1600], subtotal: [11704, 15550],
+      buffer: [1404, 1866], total: [13108, 17416], perhead: [3277, 4354]
+    },
+    comfort: {
+      hint: "舒适档（本次推荐）：中央大街一带舒适型酒店、三餐正常吃、门票按主线全含。人均落在 4,000–6,000 元区间。",
+      rows: [
+        ["往返机票", "¥1,800–2,600/人 × 4 人", [7200, 10400]],
+        ["住宿", "¥420–700/间/晚 × 2 间 × 2 晚", [1680, 2800]],
+        ["市内交通", "机场往返 + 地铁 + 两段打车，4 人合计", [600, 900]],
+        ["餐饮", "¥150–250/人/天 × 4 人 × 3 天", [1800, 3000]],
+        ["门票与体验", "冰雪大世界 + 雪博会 + 索菲亚 + 江畔项目，× 4 人", [2704, 3300]],
+        ["装备与杂项", "暖宝宝、寄存、雪地靴等，4 人", [400, 800]]
+      ],
+      lodge: [1680, 2800], subtotal: [14384, 21200],
+      buffer: [1728, 2544], total: [16112, 23744], perhead: [4028, 5936]
+    },
+    quality: {
+      hint: "品质档：中央大街高星或精品酒店、含包车与更宽的自费体验范围，适合把舒适度放在预算之前。",
+      rows: [
+        ["往返机票", "¥2,600–3,300/人 × 4 人", [10400, 13200]],
+        ["住宿", "¥800–1,300/间/晚 × 2 间 × 2 晚", [3200, 5200]],
+        ["市内交通", "含包车与全程打车，4 人合计", [1400, 2200]],
+        ["餐饮", "¥230–370/人/天 × 4 人 × 3 天", [2800, 4400]],
+        ["门票与体验", "主线门票 + 索道 + 可选项目，× 4 人", [3700, 4600]],
+        ["装备与杂项", "装备采购与租用，4 人", [800, 1500]]
+      ],
+      lodge: [3200, 5200], subtotal: [22300, 31100],
+      buffer: [2676, 3732], total: [24976, 34832], perhead: [6244, 8708]
+    }
+  };
+
+  /* 与校验脚本一致的格式化：toLocaleString('en-US') + U+2013 */
+  function fmtR(a){ return a.map(function(v){ return v.toLocaleString('en-US'); }).join("\u2013"); }
+
+  var esc = function(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); };
+
+  function renderBudget(key){
+    var t = TIERS[key];
+    if (!t) return;
+    var body = document.getElementById("budgetRows");
+    if (!body) return;
+    var html = "";
+    t.rows.forEach(function(r){
+      html += '<tr><td class="plan">' + esc(r[0]) + '</td><td class="cost">' + esc(r[1]) +
+              '</td><td class="amt"><span class="cur">¥</span><span class="num">' + fmtR(r[2]) + '</span></td></tr>';
+    });
+    html += '<tr class="sum"><td class="plan">分项合计（不含机动金）</td><td class="cost">6 项相加</td>' +
+            '<td class="amt"><span class="cur">¥</span><span class="num" data-b="subtotal">' + fmtR(t.subtotal) + '</span></td></tr>';
+    html += '<tr class="sum"><td class="plan">其中：住宿小计</td><td class="cost">2 间 × 2 晚</td>' +
+            '<td class="amt"><span class="cur">¥</span><span class="num" data-b="lodge">' + fmtR(t.lodge) + '</span></td></tr>';
+    html += '<tr class="sum"><td class="plan">机动金</td><td class="cost">分项合计 × 12%</td>' +
+            '<td class="amt"><span class="cur">¥</span><span class="num" data-b="buffer">' + fmtR(t.buffer) + '</span></td></tr>';
+    html += '<tr class="big"><td class="plan">全程总额</td><td class="cost">分项合计 + 机动金</td>' +
+            '<td class="amt"><span class="cur">¥</span><span class="num" data-b="total">' + fmtR(t.total) + '</span></td></tr>';
+    body.innerHTML = html;
+
+    var ph = document.querySelector('[data-b="perhead"]');
+    if (ph) ph.textContent = fmtR(t.perhead);
+    var gt = document.getElementById("grandTotal");
+    if (gt) gt.textContent = fmtR(t.total);
+    var hint = document.getElementById("tierHint");
+    if (hint) hint.textContent = t.hint;
+  }
+
+  /* ---------- 日期标签 ---------- */
+  var tabs = [].slice.call(document.querySelectorAll(".daytabs button"));
+  function showDay(d){
+    tabs.forEach(function(b){ b.setAttribute("aria-selected", b.dataset.day === String(d) ? "true" : "false"); });
+    [].slice.call(document.querySelectorAll(".day")).forEach(function(p){
+      p.classList.toggle("on", p.id === "day-" + d);
+    });
+    syncScrollFade();
+  }
+  tabs.forEach(function(b){ b.addEventListener("click", function(){ showDay(b.dataset.day); }); });
+
+  /* ---------- 第 2 天节奏二选一 ---------- */
+  var paceBtns = [].slice.call(document.querySelectorAll("[data-pace]"));
+  function setPace(p){
+    paceBtns.forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.pace === p ? "true" : "false"); });
+    [].slice.call(document.querySelectorAll("[data-pace-row]")).forEach(function(tr){
+      tr.style.display = (tr.dataset.paceRow === p) ? "" : "none";
+    });
+    var tc = document.querySelector("[data-pace-time]");
+    if (tc) tc.textContent = (p === "direct") ? "15:20–21:00" : "16:00–21:00";
+    syncScrollFade();
+  }
+  paceBtns.forEach(function(b){ b.addEventListener("click", function(){ setPace(b.dataset.pace); }); });
+
+  /* ---------- 预算档位 ---------- */
+  var tierBtns = [].slice.call(document.querySelectorAll("[data-tier]"));
+  function setTier(k){
+    tierBtns.forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.tier === k ? "true" : "false"); });
+    renderBudget(k);
+  }
+  tierBtns.forEach(function(b){ b.addEventListener("click", function(){ setTier(b.dataset.tier); }); });
+
+  /* ---------- 宽表格滚动接管 ---------- */
+  function syncScrollFade(){
+    [].slice.call(document.querySelectorAll(".tscroll")).forEach(function(sc){
+      var over = sc.scrollWidth - sc.clientWidth;
+      if (over > 2){
+        sc.classList.add("is-scrollable");
+        sc.classList.toggle("at-end", sc.scrollLeft >= over - 2);
+      } else {
+        sc.classList.remove("is-scrollable");
+        sc.classList.remove("at-end");
+      }
+    });
+  }
+  [].slice.call(document.querySelectorAll(".tscroll")).forEach(function(sc){
+    sc.addEventListener("scroll", function(){
+      var over = sc.scrollWidth - sc.clientWidth;
+      sc.classList.toggle("at-end", over > 2 && sc.scrollLeft >= over - 2);
+    }, { passive: true });
+  });
+  var rid;
+  window.addEventListener("resize", function(){
+    clearTimeout(rid);
+    rid = setTimeout(syncScrollFade, 60);
+  });
+
+  /* ---------- 出发清单 ---------- */
+  var KEY = "harbin-3d-packing-v1";
+  var boxes = [].slice.call(document.querySelectorAll("#checklist input[type=checkbox]"));
+  var prog = document.getElementById("prog");
+  var store = null;
+  try { store = window.localStorage; } catch (e) { store = null; }
+
+  function loadState(){
+    if (!store) return null;
+    try { return JSON.parse(store.getItem(KEY) || "null"); } catch (e) { return null; }
+  }
+  function saveState(){
+    if (!store) return;
+    try {
+      var o = {};
+      boxes.forEach(function(b){ o[b.dataset.k] = b.checked; });
+      store.setItem(KEY, JSON.stringify(o));
+    } catch (e) {}
+  }
+  function refreshProgress(){
+    var n = boxes.filter(function(b){ return b.checked; }).length;
+    if (prog) prog.textContent = n + "/" + boxes.length;
+    boxes.forEach(function(b){
+      var l = b.closest("label");
+      if (l) l.classList.toggle("done", b.checked);
+    });
+  }
+  var saved = loadState();
+  if (saved) boxes.forEach(function(b){ if (saved[b.dataset.k]) b.checked = true; });
+  boxes.forEach(function(b){
+    b.addEventListener("change", function(){ refreshProgress(); saveState(); });
+  });
+  refreshProgress();
+
+  var undone = document.getElementById("onlyUndone");
+  var onlyUndoneOn = false;
+  if (undone){
+    undone.addEventListener("click", function(){
+      onlyUndoneOn = !onlyUndoneOn;
+      undone.textContent = onlyUndoneOn ? "显示全部" : "只看未完成";
+      undone.setAttribute("aria-pressed", onlyUndoneOn ? "true" : "false");
+      [].slice.call(document.querySelectorAll("#checklist label")).forEach(function(l){
+        var cb = l.querySelector("input");
+        l.style.display = (onlyUndoneOn && cb && cb.checked) ? "none" : "";
+      });
+    });
+  }
+  var reset = document.getElementById("reset");
+  if (reset){
+    reset.addEventListener("click", function(){
+      boxes.forEach(function(b){ b.checked = false; });
+      [].slice.call(document.querySelectorAll("#checklist label")).forEach(function(l){ l.style.display = ""; });
+      onlyUndoneOn = false;
+      if (undone){ undone.textContent = "只看未完成"; undone.setAttribute("aria-pressed", "false"); }
+      refreshProgress();
+      saveState();
+    });
+  }
+
+  /* ---------- 初始化 ---------- */
+  setTier("comfort");
+  setPace("rest");
+  showDay("1");
+  syncScrollFade();
+  window.addEventListener("load", syncScrollFade);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncScrollFade);
+  setTimeout(syncScrollFade, 400);
+})();
+</script>
+</body>
+</html>

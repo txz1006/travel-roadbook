@@ -1,0 +1,25 @@
+# NOTICE
+
+本仓库包含第三方授权内容。再分发时请连同本文件与其引用的许可原文一并保留。
+
+## 字体
+
+`.agents/assets/fonts-baseline/` 下的两个 woff2 是从下列开源字体的官方发行版切出的**子集**，用于页面离线自包含。两者均为 SIL Open Font License 1.1，许可原文同目录：
+
+| 文件 | 上游 | 版本 | 许可 |
+|---|---|---|---|
+| `wenkai-broad.woff2` | 霞鹜文楷 Screen（LXGW WenKai Screen）<br>`lxgw/LxgwWenKai-Screen` | v1.520 | OFL-1.1 — `OFL-LXGWWenKaiScreen.txt` |
+| `sarasa-broad.woff2` | 更纱黑体 Mono SC（Sarasa Gothic）<br>`be5invis/Sarasa-Gothic` | v1.0.42 | OFL-1.1 — `OFL-SarasaGothic.txt` |
+
+- 两个 woff2 **不是完整字体**，只覆盖 `font-charset-broad.txt` 所列的 17,365 字（GB2312 全集 ∪ Big5 全集 ∪ Latin-1/Ext-A ∪ 常用标点箭头货币符号）。
+- 用 OFL 授权，因此**可以**随本仓库分发；但**不可单独售卖字体本身**，也不得用 "LXGW"、"Sarasa" 作为你自己产品的名字。
+- `baseline.json` 记录了源版本、哈希与「基线切出的子集 ≡ 全量直切」的等价性证明（除 `head.checkSumAdjustment` 这一非渲染字段外逐字节相同）。
+- 下游项目若替换字体，请自行核对许可并把对应许可文件放进项目自己的 `assets/fonts/`。
+
+每次切出的**计划级子集**（约 218 KB + 20 KB）落在各计划目录的 `assets/fonts/` 下，同样受 OFL 约束，交付时须带许可文件——`subset_fonts.py` 的流程已包含这一步。
+
+## 示例图片
+
+`examples/` 下的照片仅用于演示路书版式，**全部取自 Wikimedia Commons 且限定为 CC0 / 公有领域**，以便整个仓库可无附加义务地再分发。每张图的作者、原始条目与许可见该样例 `assets/images/credits.json`。
+
+**`examples/` 之外的计划目录（`旅行计划/`）不入本仓库**，因此你在自己的行程里用到的 CC BY / CC BY-SA 图片不构成本仓库的一部分。若你把某个计划对外发布，需按各图许可自行完成署名；页脚的「图片来源与许可」区块就是为此准备的。

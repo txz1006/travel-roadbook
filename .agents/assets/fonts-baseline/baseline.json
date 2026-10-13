@@ -1,0 +1,122 @@
+{
+  "schema": "font-baseline/1",
+  "generator": "scripts/make_font_baseline.py",
+  "generated_at": "2026-10-09",
+  "purpose": "自带的「广义覆盖」字体基线，替代 48.9 MB 的全量源字体。从基线切出的计划子集与从全量直切的结果**逐表等价**（除 head.checkSumAdjustment 外全部逐字节相同），见 equivalence_proof。",
+  "charset": {
+    "file": "font-charset-broad.txt",
+    "sha256": "17658400fd496aa6277f4bcf801177b2d1f72f0c0dffee35947f798c48675da9",
+    "char_count": 17365,
+    "definition": [
+      "GB2312 全集（6763 汉字 + 682 符号）",
+      "Big5 全集（约 13000 繁体汉字）",
+      "ASCII 可打印区间 U+0020–U+007E",
+      "Latin-1 补充 + Latin Extended-A/B，U+00A0–U+024F（署名里的人名，如 Hanno Böck 的 ö）",
+      "通用标点 U+2010–U+2030、U+2032–U+2040",
+      "货币符号 U+20A0–U+20C0",
+      "字母式符号 U+2100–U+2140",
+      "箭头 U+2190–U+2200（含 ⇄ U+21C4）",
+      "数学运算符 U+2200–U+2300",
+      "制表符 U+2500–U+2540",
+      "几何图形 U+25A0–U+2630（★☆○●□■ 等；© 属 Latin-1）",
+      "CJK 标点 U+3000–U+3040、U+30FB–U+30FD、全角形式 U+FF00–U+FF61"
+    ],
+    "why_not_gb2312_only": "纯 GB2312 基线（仅 1.85 MB）实测会丢 6 个真实字符：ö、©、⇄、納、氣、雙。ö 出现在摄影师 Hanno Böck 的署名里，© 每一页的图片署名都要用，繁体字在引用港台地名时会出现。故必须并入 Big5 与 Latin-1。"
+  },
+  "coverage_note": {
+    "summary": "两套字体对上述字符集的未覆盖字符**全部是汉字以外的冷门符号**，汉字未覆盖数为 0。",
+    "uncovered": {
+      "lxgw-wenkai-screen": {
+        "count": 355,
+        "sample": "‪‫‬‭‮ℂ℄ℇ℈ℋℌℍℐℑℒ℔ℕ℘ℙℚℛℜℝℤℨℬℭℯℰℱℳℴℶℷℸℹ℺ℼℽℾℿ↚↛↜↝↞↟↠↡↢↣↤↥↦↧↨↩↪↫↬"
+      },
+      "sarasa-mono-sc": {
+        "count": 53,
+        "sample": "‪‫‬‭‮₠₢₰₶₷₻℄ℊℋℐℒ℔ℛ℞℟℣℥ℬℯℰℱℳℴ☄☈☊☋☌☍☔☕☘☙☚☛☠☢☣☤☥☧☩☪☫☬☭☮＀"
+      }
+    },
+    "meaning": "这些字符（双向控制符、数理字母符号 U+2102–U+213F、冷门货币、杂项符号 ☄☎☕☠ 等）**全量源字体本身也没有**，与基线无关；页面不会用到，真出现时由 CSS font-family 回退到系统字体渲染，不会乱码。"
+  },
+  "baselines": {
+    "lxgw-wenkai-screen": {
+      "file": "wenkai-broad.woff2",
+      "sha256": "85b4612115aaf89accd65bcb7174a15e34e8d3c5fba61306ae276ba4530286a9",
+      "bytes": 4653624,
+      "family": "LXGW WenKai Screen",
+      "full_ttf_bytes": 24508762,
+      "source": {
+        "repo": "lxgw/LxgwWenKai-Screen",
+        "tag": "v1.520",
+        "asset": "LXGWWenKaiScreen.ttf",
+        "license": "OFL-1.1",
+        "license_file": "OFL-LXGWWenKaiScreen.txt",
+        "url": "https://github.com/lxgw/LxgwWenKai-Screen/releases/download/v1.520/LXGWWenKaiScreen.ttf",
+        "archive_member": null
+      },
+      "subset_opts": [
+        "--layout-features=*",
+        "--no-hinting",
+        "--desubroutinize",
+        "--drop-tables+=DSIG",
+        "--name-IDs=*",
+        "--recalc-bounds",
+        "--flavor=woff2"
+      ]
+    },
+    "sarasa-mono-sc": {
+      "file": "sarasa-broad.woff2",
+      "sha256": "fa44108b7bcfe710589dc1c95564e25cddc9b49ed7d8fad5717cb0c518fa4b64",
+      "bytes": 2354484,
+      "family": "Sarasa Mono SC",
+      "full_ttf_bytes": 25612020,
+      "source": {
+        "repo": "be5invis/Sarasa-Gothic",
+        "tag": "v1.0.42",
+        "asset": "SarasaMonoSC-TTF-1.0.42.7z",
+        "license": "OFL-1.1",
+        "license_file": "OFL-SarasaGothic.txt",
+        "extract_note": "需 py7zr 解包（环境内无 7z 可执行文件）",
+        "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v1.0.42/SarasaMonoSC-TTF-1.0.42.7z",
+        "archive_member": "SarasaMonoSC-Regular.ttf"
+      },
+      "subset_opts": [
+        "--layout-features=*",
+        "--no-hinting",
+        "--desubroutinize",
+        "--drop-tables+=DSIG",
+        "--name-IDs=*",
+        "--recalc-bounds",
+        "--flavor=woff2"
+      ]
+    }
+  },
+  "equivalence_proof": {
+    "method": "同一份计划字符表，分别从全量 TTF 与从基线各切一次，比较 SHA-256",
+    "lxgw-wenkai-screen": {
+      "equivalent": true,
+      "detail": "15 张表逐字节一致（head.checkSumAdjustment 除外）",
+      "chars": 888,
+      "missing": [],
+      "sample": "2026-11-xishuangbanna-5d"
+    },
+    "sarasa-mono-sc": {
+      "equivalent": true,
+      "detail": "17 张表逐字节一致（head.checkSumAdjustment 除外）",
+      "chars": 126,
+      "missing": [],
+      "sample": "2026-11-xishuangbanna-5d"
+    },
+    "verified_at": "2026-10-09"
+  },
+  "safety": {
+    "coverage_check": "subset_fonts.py 切完后逐字核对输出 cmap；基线没覆盖就自动回退全量字体重切，绝不静默丢字。",
+    "fallback_order": [
+      "自带基线",
+      "工作区 _shared/fonts 全量 TTF",
+      "用户级缓存全量 TTF",
+      "按 URL 下载全量 TTF"
+    ],
+    "user_cache_dir": "由 TRAVEL_ROADBOOK_FONT_CACHE 覆盖，默认 $XDG_CACHE_HOME/travel-roadbook/fonts （未设 XDG_CACHE_HOME 时为 ~/.cache/travel-roadbook/fonts）",
+    "rebuild_when": "subset_fonts.py 报「有字体回退到全量源」时，或上游字体发新版时，重跑本脚本。"
+  }
+}

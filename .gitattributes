@@ -1,0 +1,17 @@
+# 统一以 LF 入库，避免 Windows 上 CRLF 污染 diff
+* text=auto eol=lf
+
+# 二进制文件不做行尾转换、不参与文本 diff
+*.woff2 binary
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.ico   binary
+
+# SVG 是文本，保留 LF 便于逐行 diff
+*.svg text eol=lf
+
+# 二进制文件的 diff 用不到，禁掉以免仓库变大
+*.woff2 -diff
+*.jpg   -diff
+*.png   -diff
